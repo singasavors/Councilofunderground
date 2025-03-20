@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Council of Underground - Terms, Privacy & Disclaimer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    /* Reset Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+        background: #000;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden; /* Prevents full-page scrolling */
+        padding: 5px 0;
+        border-top: 2px solid #ff0000;
+        border-bottom: 2px solid #ff0000;
+    }
+
+    /* Full-Screen Fixed Container */
+    .terms-container {
+        width: 100%;
+        max-width: 800px;
+        height: 96vh;
+        background: rgba(20, 20, 20, 0.98);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: left;
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+        border: 2px solid rgba(255, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    /* Scrollable Content */
+    .terms-content {
+        flex-grow: 1;
+        overflow-y: auto;
+        padding-right: 10px;
+        scrollbar-width: thin;
+        scrollbar-color: #ff0000 rgba(255, 0, 0, 0.2);
+        line-height: 1.7;
+    }
+
+    .terms-content::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .terms-content::-webkit-scrollbar-thumb {
+        background-color: #ff0000;
+        border-radius: 5px;
+    }
+
+    /* Logo Styling */
+    .logo-container {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .logo-container img {
+        width: 100%;
+        max-width: 90px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+
+    /* Title Styling */
+    h1 {
+        font-size: 22px;
+        color: #ff0000;
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .terms-content h2 {
+        font-size: 18px;
+        color: #ff0000;
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+        margin-bottom: 10px;
+    }
+
+    .terms-content p, .terms-content ul {
+        font-size: 14px;
+        color: #bbb;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+    /* Golden Neon Link Styling */
+    a {
+        color: #FFD700; /* Gold color */
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s ease-in-out;
+        text-shadow: 0 0 5px #FFD700, 0 0 10px #FFA500, 0 0 20px #FF8C00;
+    }
+
+    a:hover {
+        color: #FFA500; /* Slightly darker gold */
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500, 0 0 30px #FF8C00;
+        transform: scale(1.05);
+    }
+
+    /* Allowed & Not Allowed Sections */
+    .rules ul {
+        list-style: none;
+        font-size: 14px;
+        color: #bbb;
+        padding-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .rules ul li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 5px;
+    }
+
+    .allowed li::before {
+        content: "✔";
+        color: #00ff00;
+        font-size: 16px;
+        flex-shrink: 0;
+    }
+
+    .not-allowed li::before {
+        content: "✖";
+        color: #ff0000;
+        font-size: 16px;
+        flex-shrink: 0;
+    }
+
+    /* Footer with "I Agree" Button */
+    footer {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .agree-btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px;
+        font-size: 15px;
+        background-color: #ff0000;
+        color: #ffffff;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        role: button;
+    }
+
+    .agree-btn:hover {
+        background-color: #ff4444;
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+    }
+
+    @media (max-width: 768px) {
+        .terms-content p {
+            font-size: 13px;
+        }
+
+        .logo-container img {
+            max-width: 80px;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="terms-container">
+    <div class="logo-container">
+        <img src="https://s.tfrbot.com/h/fpDqzH" alt="Council of Underground Logo">
+    </div>
+
+    <h1>Terms & Policies</h1>
+
+    <div class="terms-content">
+        <h2>Allowed</h2>
+        <ul class="rules allowed">
+            <li>Victims of bullying seeking support and justice.</li>
+            <li>Low-income individuals looking for financial opportunities.</li>
+            <li>Lobbyists, activists, and opposition supporters.</li>
+            <li>Individuals raising awareness about social and political issues.</li>
+        </ul>
+
+        <h2>Not Allowed</h2>
+        <ul class="rules not-allowed">
+            <li>Individuals with malicious intent towards the group, admins, or members.</li>
+            <li>Government-affiliated individuals or agencies attempting to monitor or disrupt the group.</li>
+            <li>Supporters of the People’s Action Party (PAP) as this group does not align with PAP’s policies.</li>
+        </ul>
+
+        <h2>Terms of Service</h2>
+    <h3>1. Introduction</h3>
+    <p>Welcome to the Council of Underground Telegram group. By participating in this group, you agree to these Terms of Service, which are designed to protect the group, its members, and its mission. If you do not accept these terms, please leave immediately.</p>
+
+    <h3>2. Purpose and Mission</h3>
+    <p>This group is a safe space for individuals advocating for positive change. We are committed to:</p>
+    <ul>
+        <li>Providing support for victims of bullying, oppression, and unfair treatment.</li>
+        <li>Helping low-income individuals find financial opportunities.</li>
+        <li>Facilitating open, fact-based discussions on governance, policy, and social justice.</li>
+        <li>Protecting the rights of opposition voices, activists, and whistleblowers.</li>
+    </ul>
+
+    <h3>3. Protection of Genuine Members</h3>
+    <ul>
+        <li class="important">✔ Your privacy and participation are safeguarded.</li>
+        <li class="important">✔ We do not disclose member information to third parties, including governments.</li>
+        <li class="important">✔ We provide assistance and operational support for members who seek help.</li>
+    </ul>
+
+    <h3>4. Warning to Government-Affiliated Individuals and Infiltrators</h3>
+    <ul>
+        <li class="warning">❌ If you are affiliated with any government entity or surveillance agency, do not join this group.</li>
+        <li class="warning">❌ Government-affiliated individuals who join this group are acknowledging their participation in opposition activities.</li>
+        <li class="warning">❌ If identified, such individuals will be removed immediately.</li>
+        <li class="warning">❌ Infiltrators and informants attempting to disrupt the group will be reported.</li>
+    </ul>
+
+    <h3>5. Compliance with Telegram’s Terms of Service</h3>
+    <ul>
+        <li>✔ No illegal content (terrorism, violence, child exploitation, or threats).</li>
+        <li>✔ No hate speech, harassment, or misinformation that incites harm.</li>
+        <li>✔ No doxxing or sharing of personal information without consent.</li>
+        <li>✔ No copyright violations (sharing pirated or stolen content).</li>
+    </ul>
+
+    <h3>6. Membership Rules and Conduct</h3>
+    <ul>
+        <li>Respect all members and their contributions.</li>
+        <li>Discussions must be constructive and aligned with the group’s mission.</li>
+        <li>No spamming, self-promotion, or unrelated content.</li>
+        <li>Report violations to admins instead of engaging in hostility.</li>
+    </ul>
+
+    <h3>7. Recommended Business & Alliance Partners</h3>
+    <p>We collaborate with trusted partners to strengthen our community.</p>
+    <ul>
+        <li> <a href="https://t.me/fastcastagent" target="_blank">@fastcastagent</a></li>
+        <li> <a href="https://t.me/ckintheworld1688" target="_blank">@ckintheworld1688</a></li>
+        <li> <a href="https://t.me/dmsgbeng" target="_blank">@dmsgbeng</a></li>
+    </ul>
+    <p>For alliances, contact: <a href="https://t.me/SGSIAO" target="_blank">@SGSIAO</a></p>
+
+    <h2>Privacy Policy</h2>
+    <p>✔ We do not sell, rent, or share member information.</p>
+    <p>✔ Your participation is protected, and we take security measures to prevent leaks or infiltration.</p>
+
+    <h2>Disclaimer</h2>
+    <ul>
+        <li>No liability for user-generated content.</li>
+        <li>Opinions expressed in the group do not necessarily reflect the views of the admins or owners.</li>
+        <li>We do not provide legal, financial, or political advice.</li>
+        <li>Members should consult professionals before acting on any discussion within the group.</li>
+    </ul>
+
+    <h2>Acknowledgment and Acceptance</h2>
+    <p>By remaining in this group, you agree to these Terms of Service, Privacy Policy, and Disclaimer. If you do not accept these terms, please leave immediately.</p>
+
+    <footer>
+        <button class="agree-btn" id="agreeButton">I Agree</button>
+    </footer>
+</div>
+
+<script>
+    document.getElementById("agreeButton").addEventListener("click", function() {
+        window.location.href = "https://t.me/thecouncilofunderground";
+    });
+</script>
+
+</body>
+</html>
