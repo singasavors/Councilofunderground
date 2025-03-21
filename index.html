@@ -4,59 +4,392 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Council of Underground</title>
-    <link rel="stylesheet" href="https://singasavors.github.io/Councilofunderground/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+    background: #0a0a0a;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo Container */
+.logo-container {
+    text-align: center;
+    padding: 15px;
+}
+
+.logo-container img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Header */
+header {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(180deg, #1a1a1a, #000);
+    border-bottom: 2px solid #ff0000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+}
+
+.logo h1 {
+    font-size: 22px;
+    color: #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+/* Menu Button */
+.menu-btn {
+    font-size: 16px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-btn:hover {
+    background-color: #ff4444;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+}
+
+/* Navigation Bar */
+nav {
+    width: 100%;
+    background: #1a1a1a;
+    display: none;
+    padding: 10px;
+    border-bottom: 2px solid #ff0000;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+/* Golden Neon Link Styling */
+a {
+    color: #FFD700; /* Gold */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFA500, 0 0 20px #FF8C00;
+}
+
+a:hover {
+    color: #FFA500;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500, 0 0 30px #FF8C00;
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    padding: 60px 20px;
+    max-width: 800px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    color: #ff0000;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.9);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #bbb;
+}
+
+/* Join the Movement Button */
+.btn {
+    display: inline-block;
+    padding: 14px 26px;
+    font-size: 16px;
+    background: linear-gradient(90deg, #ff0000, #ff4444);
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.9);
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #ff4444, #ff6666);
+    transform: scale(1.07);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 1);
+}
+
+/* About Section - Adjust Spacing */
+.about {
+    padding: 50px 20px;
+    max-width: 900px;
+    text-align: center;
+}
+
+.about p {
+    font-size: 16px;
+    color: #bbb;
+    line-height: 1.8; /* Increased line height for better readability */
+    margin-bottom: 25px; /* Extra spacing between paragraphs */
+}
+
+/* Features Section - Add space between each feature */
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Increased spacing between feature blocks */
+    padding: 40px 20px;
+}
+
+.feature {
+    background: rgba(20, 20, 20, 0.98);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature h3 {
+    margin-bottom: 15px; /* Space below title */
+}
+
+.feature p {
+    font-size: 15px;
+    color: #bbb;
+    line-height: 1.7; /* More space between lines */
+}
+
+/* Past Debates & Discussions */
+.debates {
+    padding: 50px 20px;
+    max-width: 900px;
+    text-align: center;
+}
+
+.debates h2 {
+    font-size: 28px;
+    color: #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    margin-bottom: 20px;
+}
+
+.debates p {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+/* Topic Box */
+.topic {
+    background: #121212;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    text-align: center;
+}
+
+.topic img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+
+.topic h3 {
+    font-size: 22px;
+    color: #FFD700;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500;
+    margin-bottom: 10px;
+}
+
+.topic p {
+    font-size: 15px;
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 20px;
+    background: #121212;
+    border-top: 2px solid #ff0000;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo-container img {
+        width: 90px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+    }
+
+    .topic img {
+        max-width: 90%;
+    }
+
+    .debates h2 {
+        font-size: 24px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Navigation Bar -->
-    <header>
-        <div class="logo">
-            <h1>Council of Underground</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="https://s.tfrbot.com/l8FgdM">Home</a></li>
-                <li><a href="https://s.tfrbot.com/pJ42sj">Carousell</a></li>
-                <li><a href="https://s.tfrbot.com/K5rMjT">Our Offers</a></li>
-                <li><a href="https://s.tfrbot.com/ezoG5W">Resources</a></li>
-                <li><a href="https://s.tfrbot.com/pQdDbS">Vape Store</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header with Logo -->
+<header>
+    <div class="logo-container">
+        <img src="https://s.tfrbot.com/h/NrQhUP" alt="Council of Underground Logo">
+    </div>
+    <div class="logo">
+        <h1>Council of Underground</h1>
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Welcome to the Underground Network</h2>
-        <p>Fighting for justice, freedom, and the unheard voices of society.</p>
-        <a href="#" class="btn">Join the Movement</a>
-    </section>
+<!-- Hidden Navigation -->
+<nav id="nav-menu">
+    <ul>
+        <li><a href="https://s.tfrbot.com/l8FgdM">Home</a></li>
+        <li><a href="https://s.tfrbot.com/pJ42sj">Carousell</a></li>
+        <li><a href="https://s.tfrbot.com/K5rMjT">Our Offers</a></li>
+        <li><a href="https://s.tfrbot.com/ezoG5W">Resources</a></li>
+        <li><a href="https://s.tfrbot.com/pQdDbS">Vape Store</a></li>
+    </ul>
+</nav>
 
-    <!-- About Section -->
-    <section class="about">
-        <h2>About Us</h2>
-        <p>The Council of Underground is a platform designed for activists, opposition supporters, and victims of injustice. Our mission is to provide a secure and anonymous space for individuals to share their concerns, access important resources, and organize for meaningful change.</p>
-    </section>
+<!-- Hero Section -->
+<section class="hero">
+    <h2>Welcome to the Underground Network</h2>
+    <p>Fighting for justice, freedom, and the unheard voices of society.</p>
+    <a href="#" class="btn">Join the Movement</a>
+</section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="feature">
-            <h3>🛡️ Secure & Anonymous</h3>
-            <p>Your identity is protected. No tracking, no surveillance.</p>
-        </div>
-        <div class="feature">
-            <h3>📚 Knowledge & Resources</h3>
-            <p>Access information to educate yourself on policies and rights.</p>
-        </div>
-        <div class="feature">
-            <h3>🤝 Community Support</h3>
-            <p>Connect with like-minded individuals and create change.</p>
-        </div>
-    </section>
+<!-- Past Debates & Discussions -->
+<section class="debates">
+    <h2>Past Discussions by the Council of Underground</h2>
+    <p>The Council of Underground has continuously exposed government misdeeds, bringing attention to issues that impact Singaporeans. Here are some of the topics we've spoken up about:</p>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Council of Underground | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-    </footer>
+    <!-- Topic 1: Job for FT, Grab for SG - SkillsFuture, But No Future -->
+    <div class="topic">
+        <img src="https://s.tfrbot.com/h/makBUJ" alt="Job for FT, Grab for SG">
+        <h3>Job for FT, Grab for SG - SkillsFuture, But No Future</h3>
+        <p>The Council of Underground has openly criticized the government for prioritizing foreigners over its own citizens. Hardworking Singaporeans toil as taxi drivers, food delivery riders, and cleaners, while foreign recruits from Sri Lanka, Myanmar, India, China, and the Philippines secure well-paying APO positions with ease.</p>
+        <a href="https://s.tfrbot.com/7hCHtZ" class="btn">Read More</a>
+    </div>
+
+    <!-- Topic 2: ACRA Data Breach -->
+    <div class="topic">
+        <img src="https://s.tfrbot.com/h/96XiNZ" alt="ACRA Data Breach">
+        <h3>ACRA Data Breach</h3>
+        <p>The Accounting and Corporate Regulatory Authority (ACRA) has suffered one of the most disastrous cybersecurity failures in Singapore’s history, leading to an increase in scams and financial losses amounting to millions. The exposure of NRIC numbers has enabled criminal syndicates to profile, target, and exploit victims with alarming precision.</p>
+        <p>Despite this massive failure, no PAP minister has been held accountable. Meanwhile, opposition leader Pritam Singh was convicted in a biased process led by a committee dominated by PAP ministers who voted 5-1 against him, showing how the government shields its own members while attacking the opposition.</p>
+        <a href="https://s.tfrbot.com/Xt3zhg" class="btn">Full Content</a>
+    </div>
+
+    <!-- Topic 3: PAP’s Association with Fraudulent Companies -->
+    <div class="topic">
+        <img src="https://s.tfrbot.com/h/aMudw9" alt="PAP and Fraudulent Companies">
+        <h3>PAP’s Association with Fraudulent Companies Raises Concerns</h3>
+        <p>Singapore is known for its strict laws against illegal activities, including gambling and money laundering. However, concerns have been raised over the PAP’s links to companies accused of fraudulent practices, such as Bigo Live, a Singapore-based live-streaming platform under global scrutiny for its alleged involvement in money laundering and online gambling.</p>
+        <a href="https://s.tfrbot.com/7hCHtZ" class="btn">Read More</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about">
+    <h2>About Us</h2>
+    <p>The Council of Underground is a platform designed for activists, opposition supporters, and victims of injustice. 
+       Our mission is to provide a secure and anonymous space for individuals to share their concerns, access important resources, 
+       and organize for meaningful change.</p>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="feature">
+        <h3>🛡️ Secure & Anonymous</h3>
+        <p>Your identity is protected. No tracking, no surveillance.</p>
+    </div>
+    <div class="feature">
+        <h3>📚 Knowledge & Resources</h3>
+        <p>Access information to educate yourself on policies and rights.</p>
+    </div>
+    <div class="feature">
+        <h3>🤝 Community Support</h3>
+        <p>Connect with like-minded individuals and create change.</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Council of Underground | <a href="https://s.tfrbot.com/OboTUE">Privacy Policy</a> | 
+       <a href="https://s.tfrbot.com/OboTUE">Terms of Service</a>
+    </p>
+</footer>
+
+<!-- JavaScript for Menu Toggle -->
+<script>
+    function toggleMenu() {
+        var nav = document.getElementById("nav-menu");
+        nav.style.display = nav.style.display === "block" ? "none" : "block";
+    }
+</script>
 
 </body>
 </html>
