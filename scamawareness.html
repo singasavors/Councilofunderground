@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Council of Underground - Terms, Privacy & Disclaimer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    /* Reset Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+        background: #000;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden; /* Prevents full-page scrolling */
+        padding: 5px 0;
+        border-top: 2px solid #ff0000;
+        border-bottom: 2px solid #ff0000;
+    }
+
+    /* Full-Screen Fixed Container */
+    .terms-container {
+        width: 100%;
+        max-width: 800px;
+        height: 96vh;
+        background: rgba(20, 20, 20, 0.98);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: left;
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+        border: 2px solid rgba(255, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    /* Scrollable Content */
+    .terms-content {
+        flex-grow: 1;
+        overflow-y: auto;
+        padding-right: 10px;
+        scrollbar-width: thin;
+        scrollbar-color: #ff0000 rgba(255, 0, 0, 0.2);
+        line-height: 1.7;
+    }
+
+    .terms-content::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .terms-content::-webkit-scrollbar-thumb {
+        background-color: #ff0000;
+        border-radius: 5px;
+    }
+
+    /* Logo Styling */
+    .logo-container {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .logo-container img {
+        width: 100%;
+        max-width: 90px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+
+    /* Title Styling */
+    h1 {
+        font-size: 22px;
+        color: #ff0000;
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .terms-content h2 {
+        font-size: 18px;
+        color: #ff0000;
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+        margin-bottom: 10px;
+    }
+
+    .terms-content p, .terms-content ul {
+        font-size: 14px;
+        color: #bbb;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+    /* Golden Neon Link Styling */
+    a {
+        color: #FFD700; /* Gold color */
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s ease-in-out;
+        text-shadow: 0 0 5px #FFD700, 0 0 10px #FFA500, 0 0 20px #FF8C00;
+    }
+
+    a:hover {
+        color: #FFA500; /* Slightly darker gold */
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500, 0 0 30px #FF8C00;
+        transform: scale(1.05);
+    }
+
+    /* Allowed & Not Allowed Sections */
+    .rules ul {
+        list-style: none;
+        font-size: 14px;
+        color: #bbb;
+        padding-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .rules ul li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 5px;
+    }
+
+    .allowed li::before {
+        content: "✔";
+        color: #00ff00;
+        font-size: 16px;
+        flex-shrink: 0;
+    }
+
+    .not-allowed li::before {
+        content: "✖";
+        color: #ff0000;
+        font-size: 16px;
+        flex-shrink: 0;
+    }
+
+    /* Footer with "I Agree" Button */
+    footer {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .agree-btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px;
+        font-size: 15px;
+        background-color: #ff0000;
+        color: #ffffff;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        role: button;
+    }
+
+    .agree-btn:hover {
+        background-color: #ff4444;
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+    }
+
+    @media (max-width: 768px) {
+        .terms-content p {
+            font-size: 13px;
+        }
+
+        .logo-container img {
+            max-width: 80px;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="terms-container">
+    <div class="logo-container">
+        <img src="https://s.tfrbot.com/h/2hRKS1" alt="Scam Aware Asia Logo">
+    </div>
+
+    <h1>ScamAwareAsia</h1>
+
+    <div class="terms-content">
+        <h2>Terms of Service</h2>
+
+<h3>1. Purpose</h3>
+<p>This Telegram group exists solely to spread awareness about online scams and expose individuals or entities involved in fraudulent behavior. This is not a marketplace, and advertising, buying, or selling is strictly prohibited within this group.</p>
+
+<h3>2. Group Rules</h3>
+<p><strong>NO ADVERTISING:</strong> Any form of direct or indirect promotion will result in a ban.</p>
+<p><strong>NO BUYING / SELLING / REQUESTING PRODUCTS:</strong> This includes bank rental, vape products, pharmaceuticals, etc.</p>
+<p><strong>NO VOUCHING OR PROMOTING UNVERIFIED SELLERS:</strong> Doing so may result in immediate removal from the group.</p>
+<p><strong>STAY ON TOPIC:</strong> Only scam-related reports, discussions, and verifiable alerts are allowed.</p>
+<p><strong>BE RESPECTFUL:</strong> Harassment, false accusations, or hostile behavior is not tolerated.</p>
+
+<h3>3. Moderator Authority</h3>
+<p>Admins reserve the right to:</p>
+<ul>
+    <li>Remove users or content without warning</li>
+    <li>Ban members who break the rules</li>
+    <li>Share scam-related information with affiliated groups</li>
+    <li>Report abuse through Telegram’s internal systems</li>
+</ul>
+<p>Moderation tools include: Securityル, Combot, Rose, and Group Help Bot.</p>
+
+<h3>4. Affiliations</h3>
+<p>This group is connected to trusted scam reporting community and underground organizations</p>
+<ul>
+    <li>Council of Underground <a href="https://t.me/thecouncilofunderground">https://t.me/thecouncilofunderground</a></li>
+    <li>Singapore Authentic Scam Review <a href="https://t.me/singaporescammer">https://t.me/singaporescammer</a></li>
+</ul>
+
+<h3>5. Verified Sellers List</h3>
+<p>While not promoted within this group, certain verified sellers are recognized and may be contacted only outside this chat:</p>
+<ul>
+    <li>SUBSTANCE: PM Admin directly if looking for it</li>
+    <li>GLASSWARE: <a href="https://t.me/KtkGlassAdmin">@KtkGlassAdmin</a></li>
+    <li>VAPE/KPODS: (Verified names not provided – PM Admin if needed)</li>
+    <li>BANK RENTAL / FAST CASH: <a href="https://t.me/ckintheworld1688">@ckintheworld1688</a>, <a href="https://t.me/RoystonFastcashs">@RoystonFastcashs</a></li>
+</ul>
+
+<h3>6. Affiliate Market Groups</h3>
+<p>You may visit these groups to conduct your own transactions at your own risk. No activity from these groups is endorsed here:</p>
+<ul>
+    <li>SG Pharmaceutical Market (Black Market) <a href="https://t.me/sgpharmarcy">https://t.me/sgpharmarcy</a></li>
+    <li>SG KPOD / VAPE / Cigarette <a href="https://t.me/KPODSGVAPE">https://t.me/KPODSGVAPE</a></li>
+    <li>SG Financial Market (Bank Rental / Fast Cash / Loan) <a href="https://t.me/SGFINANCEMARKET">@SGFINANCEMARKET</a></li>
+</ul>
+
+<h3>Privacy Policy</h3>
+<h4>1. Information Collected</h4>
+<p>We may collect the following public data for scam-tracking purposes:</p>
+<ul>
+    <li>Scam incident records</li>
+    <li>Publicly shared usernames or aliases</li>
+    <li>Verification notes related to flagged individuals</li>
+</ul>
+<h4>2. Usage of Data</h4>
+<p>Data is used for:</p>
+<ul>
+    <li>Scam tracking and awareness</li>
+    <li>Internal record-keeping</li>
+    <li>Group moderation</li>
+</ul>
+<h4>3. Data Sharing</h4>
+<p>Scam-related data may be shared with:</p>
+<ul>
+    <li>Admins and moderators</li>
+    <li>Affiliated scam reporting groups</li>
+    <li>Telegram admin teams (when necessary)</li>
+</ul>
+<p>We do not sell or share user data for commercial purposes.</p>
+<h4>4. Data Security</h4>
+<p>Only group admins have access to stored records. Telegram's platform encryption governs message and content security.</p>
+
+<h3>Disclaimer</h3>
+<p>The information shared here is user-generated and for awareness only. We do not guarantee the accuracy of every report. We are not liable for any transactions, disputes, or damages. This group does not provide legal, financial, or enforcement services. Users should verify claims independently and report scams to authorities.</p>
+
+<h3>Compliance with Telegram Terms of Service</h3>
+<p>To ensure continued operation and avoid group restrictions:</p>
+<ul>
+    <li>We do not promote illegal content or activity</li>
+    <li>We remove prohibited sales, spam, or content</li>
+    <li>We use moderation tools to enforce rules</li>
+    <li>We report violations via Telegram's official tools</li>
+</ul>
+<p>For full Telegram terms, visit: <a href="https://telegram.org/tos">https://telegram.org/tos</a></p>
+
+    <h2>Acknowledgment and Acceptance</h2>
+    <p>By remaining in this group, you agree to these Terms of Service, Privacy Policy, and Disclaimer. If you do not accept these terms, please leave immediately.</p>
+
+    <footer>
+        <button class="agree-btn" id="agreeButton">I Agree</button>
+    </footer>
+</div>
+
+<script>
+    document.getElementById("agreeButton").addEventListener("click", function() {
+        window.location.href = "https://t.me/ScamAwareAsia";
+    });
+</script>
+
+</body>
+</html>
