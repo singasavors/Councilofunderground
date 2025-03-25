@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
+<style>
   * {
     margin: 0;
     padding: 0;
@@ -39,7 +39,7 @@
     width: 100%;
     max-width: 750px;
     height: 96vh;
-    background: #000; /* solid black */
+    background: #000;
     padding: 30px 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
@@ -71,8 +71,16 @@
   }
 
   .logo-container img {
-    max-width: 100px;
+    max-width: 120px;
     height: auto;
+    display: inline-block;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .logo-container img:hover {
+    transform: scale(1.05);
   }
 
   label {
